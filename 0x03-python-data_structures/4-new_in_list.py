@@ -5,7 +5,7 @@ def new_in_list(my_list, idx, element):
     for i in range(len_list):
         if len_list >= idx >= 0:
             if i == idx:
-                cplist[i] = element
+                cplist[idx] = element
                 return cplist
         elif idx < 0:
             return cplist
