@@ -10,4 +10,4 @@ def safe_print_list(my_list=[], x=0):
         print()
         return out
     except TypeError:
-        pass
+        return out
