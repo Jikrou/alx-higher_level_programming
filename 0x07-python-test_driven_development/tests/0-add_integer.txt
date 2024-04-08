@@ -1,0 +1,38 @@
+# Test cases for the add_integer function
+# These test cases cover both valid and invalid inputs to
+ensure the function behaves as expected.
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Test case for adding two positive integers.
+>>> add_integer(2, 4)
+6
+
+# Test case for adding a  positive and negative integer.
+>>> add_integer(2, -2)
+0
+>>> add_integer(1, -9)
+-8
+>>> add_integer(-1, -1)
+-2
+
+# Test case for adding a single integer with default value b.
+>>> add_integer(10)
+108
+
+#invalid input test case.
+>>> add_integer(2, 'dq')
+Traceback (most recent call last):
+		...
+TypeError: b must be an integer
+
+>>> add_integer('df')
+Traceback (most recent call last):
+		...
+TypeError: a must be an integer
+
+#no input test case.
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'

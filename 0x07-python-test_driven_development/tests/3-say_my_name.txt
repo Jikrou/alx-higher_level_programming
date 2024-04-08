@@ -1,0 +1,33 @@
+# Test cases for the say_my_name function.
+# These test cases cover valid and invalide inputs
+# to ensure the function behaves as expected.
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Test cases for valide and invalide input.
+
+# Case 1: Both inputs are a string:
+>>> say_my_name("jirou", "dixon")
+My name is jirou dixon
+
+# Case 2: Only first name:
+>>> say_my_name("jirou")
+My name is jirou 
+
+# Case 3: only the last name is a string:
+>>> say_my_name(None, "dixon")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+# Case 4: both are not a string:
+>>> say_my_name(12, 2)
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+# Case 5: the last name is not an integer:
+>>> say_my_name("jike", 11)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string

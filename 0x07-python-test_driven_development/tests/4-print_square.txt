@@ -1,0 +1,45 @@
+# Test cases for the print_square function.
+# These test cases cover valid and invalid inputs
+# to ensure the function behaves as expected.
+
+>>> printS = __import__('4-print_square').print_square
+
+# Test cases for valide and invalide inputs.
+
+# Case 1: a positive integer:
+>>> printS(3)
+###
+###
+###
+
+# Case 2: a negative integer:
+>>> printS(-2)
+Traceback (most recent call last):
+	...
+ValueError: size must be >= 0
+
+# Case 3: a character:
+>>> printS('r')
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
+# Case 4: a positive float number:
+>>> printS(2.5)
+##
+##
+
+# Case 5: a negative float number:
+>>> printS(-2.5)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
+# Case 6: zero as input:
+>>> printS(0)
+
+# Case 7: empty size:
+>>> printS()
+Traceback (most recent call last):
+       ...
+TypeError: print_square() missing 1 required positional argument: 'size'
