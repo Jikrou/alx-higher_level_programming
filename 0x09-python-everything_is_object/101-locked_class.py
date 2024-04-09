@@ -28,6 +28,6 @@ class LockedClass:
             AttributeError: If the attribute being set is not 'first_name'.
         """
         if name != 'first_name':
-            err_msg = "Cannot add new attributes except 'first_name'"
+            err_msg = "'LockedClass' object has no attribute 'last_name'"
             raise AttributeError(err_msg)
         self.__dict__[name] = value
