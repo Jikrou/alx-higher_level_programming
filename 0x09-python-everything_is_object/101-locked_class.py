@@ -30,4 +30,4 @@ class LockedClass:
         if name != 'first_name':
             err_msg = "'LockedClass' object has no attribute 'last_name'"
             raise AttributeError(err_msg)
-        self.__dict__[name] = value
+        super().__setattr__(name, value)
