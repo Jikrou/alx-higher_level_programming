@@ -3,7 +3,7 @@
 
 
 def lookup(obj):
-    """ A function that return the available attribute and
-    methods of an objet.
+    """ A function that return a list of the available
+    attribute and methods of an objet.
     """
-    return dir(obj)
+    return (dir(obj))
