@@ -6,11 +6,11 @@ def is_same_class(obj, a_class):
     """ Check if an object is exactly an instance of the specified class.
 
     Args:
-        obj(any): object to check.
-        a_class(type): the class to match to obj to.
+        obj (any): Object to check.
+        a_class (type): The class to match to obj to.
     Return:
-        if the obj is exactly an instance of the class - True,
-        otherwise - False.
+        If the obj is exactly an instance of the class - True.
+        Otherwise - False.
     """
     if type(obj) == a_class:
         return True
