@@ -4,6 +4,9 @@
 
 def read_file(filename=""):
     """A function that reads a text file (UTF8) and prints it to stdout."""
+    if not filename:
+        return None
+
     with open(filename, "r") as file:
-        content = file.read()
+        content = file.read().rstrip()
         print(content)
