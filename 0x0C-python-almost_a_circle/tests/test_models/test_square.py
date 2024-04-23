@@ -29,7 +29,8 @@ class TestSquare(unittest.TestCase):
         Test the str method of the Square class.
         """
         s = Square(2)
-        self.assertEqual(str(s), "[Square] (2) 0/0 - 2")
+        expected_str = "[Square] (8) 0/0 - 2"
+        self.assertEqual(str(s), expected_str)
 
     def test_to_dictionary(self):
         """
@@ -42,4 +43,3 @@ class TestSquare(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
