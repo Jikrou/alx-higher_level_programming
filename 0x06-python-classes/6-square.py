@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """ 6-square
-
 This module contains a simple class.
 
     Classes:
         Square: a class that define a square.
-
 """
 
 
@@ -23,7 +21,6 @@ class Square:
         self.__size = size
         self.__position = position
 
-
     @property
     def size(self):
         """ size of the square."""
@@ -40,7 +37,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-
     def area(self):
         """ Calculate the area of the square.
 
@@ -53,7 +49,7 @@ class Square:
     @property
     def position(self):
         """ Position of the square. """
-        
+
         return self.__position
 
     @position.setter
@@ -62,7 +58,7 @@ class Square:
 
         if not isinstance(value, tuple) or len(value) != 2 or \
             not all(isinstance(i, int) for i in value) or \
-            not all(i >= 0 for i in value):
+                not all(i >= 0 for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
 
         self.__position = value
@@ -74,7 +70,7 @@ class Square:
             print()
         else:
             for i in range(self.__size):
-                print(" " * self.__position[0], end="") 
+                print(" " * self.__position[0], end="")
                 for j in range(self.__size):
                     print("#", end="")
                 print()
