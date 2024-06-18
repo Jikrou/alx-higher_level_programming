@@ -5,7 +5,7 @@ const avg = process.argv;
 if (av === 2) {
   console.log(0);
 } else if (av === 3) {
-  console.log(1);
+  console.log(0);
 } else {
   let mx = -Infinity;
   let seMx = -Infinity;
