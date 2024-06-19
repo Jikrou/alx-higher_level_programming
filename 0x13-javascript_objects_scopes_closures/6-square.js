@@ -10,7 +10,7 @@ class Square extends SquAre {
       for (let i = 0; i < this.height; i++) {
         let prinTc = [];
         for (let j = 0; j < this.width; j++) {
-          prinTc += 'C';
+          prinTc += 'c';
         }
         console.log(prinTc);
       }
