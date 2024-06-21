@@ -10,11 +10,12 @@ if __name__ == "__main__":
                          db=sys.argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
-    names = cur.fetchall()
+    cur.execute("SELECT * FROM states WHERE name LIKE
+                BINARY 'N%' ORDER BY states.id")
+    rows = cur.fetchall()
 
-    for n in names:
-        print(n)
+    for r in rows:
+        print(r)
 
     cur.close()
     db.close()
