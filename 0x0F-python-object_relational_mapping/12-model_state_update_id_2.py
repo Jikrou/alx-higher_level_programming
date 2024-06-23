@@ -14,5 +14,5 @@ if __name__ == '__main__':
                                             sys.argv[3]), pool_pre_ping=True)
     session = Session(engine)
     sn = session.query(State).filter(State.id == 2).first()
-    sn.name = 'Alaska'
+    sn.name = 'New Mexico'
     session.commit()
