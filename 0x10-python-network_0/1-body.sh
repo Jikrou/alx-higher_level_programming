@@ -1,3 +1,3 @@
 #!/bin/bash
 #a Bash script that takes in a URL, sends a GET request to the URL, and displays the body of the response.
-curl -sI "$1" | grep -i Location | cut -d ' ' -f2 | cut -d '/' -f2 | sed 's/_/ /g'
+curl -sL -w '\n%{http_code}' "$1" | sed -n '1,/^200$/!d;/^200$/q;p'
