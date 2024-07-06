@@ -8,12 +8,12 @@ if __name__ == '__main__':
     import requests
     import sys
 
-    if len(sys.argv[1]) > 0:
+    if len(sys.argv[1]) > 1:
         q = sys.argv[1]
     else:
         q = ""
 
-    r = requests.post('http://0.0.0.0:5000/search_user', data=('q', q))
+    r = requests.post('http://0.0.0.0:5000/search_user', data={'q', q})
     try:
         r = r.json()
         if r == {}:
