@@ -13,7 +13,7 @@ if __name__ == '__main__':
     else:
         q = ""
 
-    r = requests.post('http://0.0.0.0:5000/search_user', data={'q', q})
+    r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
     try:
         r = r.json()
         if r == {}:
