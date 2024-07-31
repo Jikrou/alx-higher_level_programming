@@ -2,11 +2,12 @@
 
 const request = require('request');
 const urlBase = process.argv[2];
-const urlCode = urlBase.replace('films', 'people/18');
 
-request(urlCode, function (err, response, body) {
+request(urlBase, function (err, response, body) {
   if (err) throw err;
-  const data = JSON.parse(body);
-  const dataFil = data.films;
-  console.log(dataFil.length);
+  const films = JSON.parse(body).results;
+  const count = films.reduce((acc, film) => {
+    return acc + (film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/') ? 1 : 0);
+  }, 0);
+  console.log(count);
 });
